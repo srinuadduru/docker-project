@@ -1,0 +1,26 @@
+version: '3'
+services:
+  movies:
+    image: srinu101/moviesservice:latest
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 3
+
+  train:
+    image: srinu101/trainservice:latest
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 3
+
+  dth:
+    image: srinu101/dthservice:latest
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 3
+  recharge:
+    image: srinu101/rechargeservice:latest
+      replicas: 3
+
